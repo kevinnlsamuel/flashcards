@@ -2,10 +2,11 @@ const worker = new Worker(new URL("./worker.js", import.meta.url), {
 	type: "module",
 });
 
+const deck = new URLSearchParams(location.search).get('deck') || 'gr1.002-vocab.min.json'
 worker.onerror = console.error;
 worker.onmessage = handleWorkerMessage;
 worker.postMessage({ type: "ping" });
-worker.postMessage({ type: "load", deckUrl: "../ta-deck.json" });
+worker.postMessage({ type: "load", deckUrl: `../${deck}` });
 
 const mainEle = document.getElementById("main");
 const startBtn = document.getElementById("action-start");
