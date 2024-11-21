@@ -8,6 +8,26 @@ worker.onmessage = handleWorkerMessage;
 worker.postMessage({ type: "ping" });
 worker.postMessage({ type: "load", deckUrl: `../decks/${deck}.min.json` });
 
+fetch('../decks.json')
+	.then(res => res.json()
+		.then(decks => {
+			const target = document.getElementById('deck-list')
+			for (const _deck of decks) {
+					const name = _deck.replace('.min.json','')
+				target.append(
+					Object.assign(
+						document.createElement('option'),
+						{
+							value: name,
+							innerText: name,
+							selected: name === deck,
+						}
+					)
+				)
+			}
+		})
+	)
+
 const mainEle = document.getElementById("main");
 const startBtn = document.getElementById("action-start");
 const stopBtn = document.getElementById("action-stop");
