@@ -43,6 +43,6 @@ async function loadDeck(url) {
 		}
 	} catch (e) {
 		console.error(e);
-		throw "something happened trying to read Deck File";
+		throw `something happened trying to read Deck File @ ${url}`;
 	}
 }
