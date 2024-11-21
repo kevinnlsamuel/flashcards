@@ -43,9 +43,14 @@ sh: CONTAINER_TAG = sh
 sh:
 	podman run $(POD_OPTIONS_TEMPLATE) sh
 
+define decks_file
+	const decks = \
+		$(shell cd public/decks/ && jo -a *.min.json); \
+	export { decks }
+endef
 decks: src/decks/
 	make $(addprefix public/decks/,$(subst yml,min.json,$(notdir $(wildcard src/decks/*.yml))))
-	cd public/decks/; jo -a *.min.json > ../../src/decks.json
+	echo '$(decks_file)' > src/decks.js
 
 public/decks/%.min.json: src/decks/%.yml
 	yq --output-format json --indent 0 $< > $@

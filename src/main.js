@@ -1,11 +1,27 @@
 const worker = new Worker(new URL("./worker.js", import.meta.url), {
 	type: "module",
 });
+import { decks } from './decks.js'
 
 const deck = new URLSearchParams(location.search).get('deck')
 worker.onerror = console.error;
 worker.onmessage = handleWorkerMessage;
 worker.postMessage({ type: "ping" });
+const frag = document.createDocumentFragment()
+for (const _deck of decks) {
+	const name = _deck.replace('.min.json','')
+	frag.append(
+		Object.assign(
+			document.createElement('option'),
+			{
+				value: name,
+				innerText: name,
+				selected: name === deck,
+			}
+		)
+	)
+}
+document.getElementById('deck-list').append(frag)
 if (deck) worker.postMessage({ type: "load", deckUrl: `../decks/${deck}.min.json` });
 
 const mainEle = document.getElementById("main");
@@ -107,21 +123,6 @@ function handleWorkerMessage(msg) {
 	switch (msg.data.type) {
 		case "pong":
 			console.log("received pong from worker!");
-			const frag = document.createDocumentFragment()
-			for (const _deck of msg.data.decks) {
-				const name = _deck.replace('.min.json','')
-				frag.append(
-					Object.assign(
-						document.createElement('option'),
-						{
-							value: name,
-							innerText: name,
-							selected: name === deck,
-						}
-					)
-				)
-			}
-			document.getElementById('deck-list').append(frag)
 			break;
 		case "update":
 			updateCard(msg.data.content);
