@@ -43,3 +43,8 @@ sh: CONTAINER_TAG = sh
 sh:
 	podman run $(POD_OPTIONS_TEMPLATE) sh
 
+decks: src/decks/
+	make $(addprefix public/decks/,$(subst yml,min.json,$(notdir $(wildcard src/decks/*.yml))))
+
+public/decks/%.min.json: src/decks/%.yml
+	yq --output-format json --indent 0 $< > $@
