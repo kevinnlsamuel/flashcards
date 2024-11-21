@@ -44,7 +44,7 @@ deck:
 
   - term: vingt-deux
     defn: 22
-  - term: vingt-et-un
+  - term: vingt et un
     defn: 21
   - term: vingt-trois
     defn: 23
@@ -57,7 +57,7 @@ deck:
     defn: 34
   - term: trente-sept
     defn: 37
-  - term: trente-et-un
+  - term: trente et un
     defn: 31
   - term: trente-trois
     defn: 33
@@ -66,7 +66,7 @@ deck:
     defn: 49
   - term: quarante-cinq
     defn: 45
-  - term: quarante-et-un
+  - term: quarante et un
     defn: 41
   - term: quarante-deux
     defn: 42
