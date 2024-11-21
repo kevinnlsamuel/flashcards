@@ -10,7 +10,8 @@ let currentIndex = 0;
 onmessage = async (msg) => {
 	switch (msg.data.type) {
 		case "ping":
-			postMessage({ type: "pong" });
+			const decks = await load('./decks.json')
+			postMessage({ type: "pong", decks });
 			break;
 		case "all":
 			postMessage({ type: "all", content: originalDeck });

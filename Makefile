@@ -45,7 +45,7 @@ sh:
 
 decks: src/decks/
 	make $(addprefix public/decks/,$(subst yml,min.json,$(notdir $(wildcard src/decks/*.yml))))
-	cd public/decks/; jo -a *.min.json > ../decks.json
+	cd public/decks/; jo -a *.min.json > ../../src/decks.json
 
 public/decks/%.min.json: src/decks/%.yml
 	yq --output-format json --indent 0 $< > $@
