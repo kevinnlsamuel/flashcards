@@ -32,7 +32,7 @@ jobs:
      run: yarn run build
 
    - name: "upload artificat"
-     uses: actions/upload-pages-artifact@v1
+     uses: actions/upload-pages-artifact@v4
      with:
       path: "dist"
 
@@ -49,4 +49,4 @@ jobs:
   steps:
    - name: "deploy to GitHub Pages"
      id: deploy
-     uses: actions/deploy-pages@v1
+     uses: actions/deploy-pages@v4
