@@ -5,6 +5,10 @@ deck:
     defn: C'est un cahier
   - term: Saluez la classe
     defn:
-  - term: Dites « Au revoir »
+  - term: Dites 🗣 « Au revoir »
     defn:
+  - term: Dites 🗣 « Bonjour » 🌃
+    defn:
+  - term: "Tournez et lisez : 1947"
+    defn: mille neuf cent quarante-sept
 
