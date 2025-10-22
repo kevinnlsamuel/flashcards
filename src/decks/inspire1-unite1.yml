@@ -33,89 +33,45 @@ deck:
     defn: 
   - term: Qu'est-ce que c'est ? 🖊️
     defn: C'est un stylo
-  - term: 
+  - term: Qu'est-ce que c'est ? ✏️
+    defn: C'est un crayon
+  - term: Parlez
     defn: 
-  - term: 
+  - term: Parlez
     defn: 
-  - term: 
+  - term: Écoutez
     defn: 
-  - term: 
+  - term: Écoutez
     defn: 
-  - term: 
+  - term: Écrivez
     defn: 
-  - term: 
+  - term: Écrivez
     defn: 
-  - term: 
+  - term: Éteignez les ventilateurs s'il vous plaît
     defn: 
-  - term: 
+  - term: Allumez les ventilateurs s'il vous plaît
     defn: 
-  - term: 
+  - term: Dites 🗣️ « Au revoir » à la classe
     defn: 
-  - term: 
+  - term: Dites 🗣️ « Bonjour » à la classe
     defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
-    defn: 
-  - term: 
+  - term: Demain est… (quel jour ?)
+    defn: Demain est jeudi
+  - term: Hier est… (quel jour ?)
+    defn: Hier est mardi
+  - term: Après-demain est… (quel jour ?)
+    defn: Après-demain est vendredi
+  - term: Aujourd'hui est… (quel jour ?)
+    defn: Aujourd'hui est mercredi
+  - term: Quelle est la date ?
+    defn: C'est le 22 octobre
+  - term: Quelle est la date ?
+    defn: C'est le 22 octobre
+  - term: Quelle est la date ?
+    defn: C'est le 22 octobre
+  - term: Quelle est la date ?
+    defn: C'est le 22 octobre
+  - term: Présentez-vous
     defn: 
   - term: Comptez les tableaux
     defn: 
@@ -151,5 +107,5 @@ deck:
     defn: 
   - term: Saluez le professeur
     defn: 
-  - term: Saluez un ami
+  - term: Saluez un ami 🌃
     defn: 

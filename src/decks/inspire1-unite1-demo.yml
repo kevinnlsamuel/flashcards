@@ -1,0 +1,10 @@
+meta:
+  name: Démonstration
+deck:
+  - term: Qu'est-ce que c'est ? 📔
+    defn: C'est un cahier
+  - term: Saluez la classe
+    defn:
+  - term: Dites « Au revoir »
+    defn:
+
